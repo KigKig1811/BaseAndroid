@@ -1,0 +1,39 @@
+ext {
+    minSdkVersion = 28
+    targetSdkVersion = 33 // define which android sdk is used to development and testing
+    compileSdkVersion = 31 // define which android sdk  is used to compile project
+
+    versions = [
+            coreKtx           : '1.9.0',
+            appCompat         : '1.6.1',
+            material          : '1.8.0',
+            constraintlayout  : '2.1.4',
+            junit             : '4.13.2',
+            testJunit         : '1.1.5',
+            espressoCore      : '3.5.1',
+
+            retrofit          : '2.9.0',
+            loggingInterceptor: '4.10.0',
+            rxjava            : '3.1.6',
+            rxandroid         : '3.0.2',
+            koin              : '3.3.3',
+            navigation        : '2.3.5',
+            jjwt              : '0.11.5',
+            glide             : '4.14.2',
+            coil              : '2.2.2',
+            timber            : '5.0.1',
+    ]
+
+    dependencies = [
+            //Core Android
+            coreKtx = 'androidx.core:core-ktx:@versions.coreKtx',
+            appcompat = 'androidx.appcompat:appcompat:@versions.appCompat',
+            material = 'com.google.android.material:material:@versions.material'
+            constraintlayout = 'androidx.constraintlayout:constraintlayout:@versions.constraintlayout',
+            junit = 'junit:junit:@versions.junit',
+            testJunit = 'androidx.test.ext:junit:@versions.testJunit',
+            espressoCore = 'androidx.test.espresso:espresso-core:@versions.espressoCore',
+
+
+    ]
+}
