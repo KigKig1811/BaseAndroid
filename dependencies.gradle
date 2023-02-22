@@ -11,11 +11,13 @@ ext {
             junit             : '4.13.2',
             testJunit         : '1.1.5',
             espressoCore      : '3.5.1',
+            lifecycleVersion          : '2.5.1',
 
             retrofit          : '2.9.0',
             loggingInterceptor: '4.10.0',
-            rxjava            : '3.1.6',
-            rxandroid         : '3.0.2',
+            gson              : '2.10.1',
+            rxJava            : '3.1.5',
+            rxAndroid         : '3.0.0',
             koin              : '3.3.3',
             navigation        : '2.3.5',
             jjwt              : '0.11.5',
@@ -25,15 +27,39 @@ ext {
     ]
 
     dependencies = [
-            //Core Android
-            coreKtx = 'androidx.core:core-ktx:@versions.coreKtx',
-            appcompat = 'androidx.appcompat:appcompat:@versions.appCompat',
-            material = 'com.google.android.material:material:@versions.material'
-            constraintlayout = 'androidx.constraintlayout:constraintlayout:@versions.constraintlayout',
-            junit = 'junit:junit:@versions.junit',
-            testJunit = 'androidx.test.ext:junit:@versions.testJunit',
-            espressoCore = 'androidx.test.espresso:espresso-core:@versions.espressoCore',
-
+            //core Android
+            coreKtx = "androidx.core:core-ktx:$versions.coreKtx",
+            appCompat = "androidx.appcompat:appcompat:$versions.appCompat",
+            material = "com.google.android.material:material:$versions.material",
+            constraintlayout = "androidx.constraintlayout:constraintlayout:$versions.constraintlayout",
+            junit = "junit:junit:$versions.junit",
+            testJunit = "androidx.test.ext:junit:$versions.testJunit",
+            espressoCore = "androidx.test.espresso:espresso-core:$versions.espressoCore",
+            //viewModel,liveData
+            lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleVersion",
+            liveData = "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycleVersion",
+            //network
+            retrofit = "com.squareup.retrofit2:retrofit:$versions.retrofit",
+            loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:$versions.loggingInterceptor",
+            //converter to json
+            gson = "com.google.code.gson:gson:$versions.gson",
+            //rxjava
+            rxJava = "io.reactivex.rxjava3:rxjava:$versions.rxJava",
+            rxAndroid = "io.reactivex.rxjava3:rxandroid:$versions.rxAndroid",
+            //dependencies injection
+            koin = "io.insert-koin:koin-core:$versions.koin",
+            //navigation
+            navigationFragment = "androidx.navigation:navigation-fragment-ktx:$versions.navigation",
+            navigationUi = "androidx.navigation:navigation-ui-ktx:$versions.navigation",
+            //jjwt
+            jjwtApi = "io.jsonwebtoken:jjwt-api:$versions.jjwt",
+            jjwtImpl = "io.jsonwebtoken:jjwt-impl:$versions.jjwt",
+            jjwtOrgjson = "io.jsonwebtoken:jjwt-orgjson:$versions.jjwt",
+            //media
+            glide = "com.github.bumptech.glide:glide:$versions.glide",
+            coil = "io.coil-kt:coil:$versions.coil",
+            //logcat
+            timber = "com.jakewharton.timber:timber:$versions.timber",
 
     ]
 }

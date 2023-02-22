@@ -4,9 +4,25 @@ plugins {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 dependencies {
+    //network
+    implementation rxJava
+    implementation rxAndroid
+    implementation retrofit
+
+    //parser
+    implementation gson
+
+    //jjwt
+    api jjwtApi
+    runtimeOnly jjwtImpl
+    runtimeOnly(jjwtOrgjson) {
+        exclude group: 'org.json', module: 'json'
+    }
+
+    //module
     implementation project(':domain')
 }
