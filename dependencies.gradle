@@ -11,7 +11,7 @@ ext {
             junit             : '4.13.2',
             testJunit         : '1.1.5',
             espressoCore      : '3.5.1',
-            lifecycleVersion          : '2.5.1',
+            lifecycleVersion  : '2.5.1',
 
             retrofit          : '2.9.0',
             loggingInterceptor: '4.10.0',
@@ -40,6 +40,10 @@ ext {
             liveData = "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycleVersion",
             //network
             retrofit = "com.squareup.retrofit2:retrofit:$versions.retrofit",
+            retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:$versions.retrofit",
+            retrofitRxJava2Adapter = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit",
+            //scalars
+            scalars = "com.squareup.retrofit2:converter-scalars:$versions.retrofit",
             loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:$versions.loggingInterceptor",
             //converter to json
             gson = "com.google.code.gson:gson:$versions.gson",

@@ -18,8 +18,13 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField('String', 'BASE_URL', '"https://api.punkapi.com/v2/"')
+        }
+        debug {
+            minifyEnabled false
+            buildConfigField('String', 'BASE_URL', '"https://api.punkapi.com/v2/"')
         }
     }
     compileOptions {
@@ -49,6 +54,9 @@ dependencies {
 
     //network
     implementation retrofit
+    implementation retrofitGsonConverter
+    implementation retrofitRxJava2Adapter
+    implementation scalars
     implementation loggingInterceptor
 
     //rxAndroid
