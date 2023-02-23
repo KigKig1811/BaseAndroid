@@ -9,14 +9,10 @@ data class ListBeerEntity(
             val listBeerEntity = ListBeerEntity()
             map.map {
                 val value = it.value.toString()
-                when (it.key) {
-                    "" -> {
-                        val dataList = value as List<Map<String, Any?>>
-                        listBeerEntity.listBeer = dataList.map { map ->
-                            BeerEntity.create(map)
-                        }.toMutableList()
-                    }
-                }
+                val dataList = value as List<Map<String, Any?>>
+                listBeerEntity.listBeer = dataList.map { map ->
+                    BeerEntity.create(map)
+                }.toMutableList()
             }
             return listBeerEntity
         }

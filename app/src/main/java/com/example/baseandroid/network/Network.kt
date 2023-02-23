@@ -13,7 +13,7 @@ import java.io.IOException
 import java.util.concurrent.TimeUnit
 
 
-//fun createNetworkClient(baseUrl: String) = retrofitClient(baseUrl, httpClient())
+fun createNetworkClient(baseUrl: String) = retrofitClient(baseUrl, httpClient())
 
 class AuthInterceptor : Interceptor {
     @Throws(IOException::class)
