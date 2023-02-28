@@ -6,6 +6,11 @@ import com.example.baseandroid.di.mRepositoryModules
 import com.example.baseandroid.di.mUseCaseModule
 import com.example.baseandroid.di.memCacheModule
 import org.koin.core.context.startKoin
+import timber.log.Timber
+
+
+
+
 
 
 class Application : Application() {

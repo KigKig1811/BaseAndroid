@@ -71,6 +71,7 @@ dependencies {
 
     //dependencies injection
     implementation koin
+//    implementation koinLoger
 //    implementation koinViewModel
 
     //logcat
