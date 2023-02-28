@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.data.entities.MemCache
-import org.koin.java.KoinJavaComponent.inject
+import org.koin.android.ext.android.inject
 
 
 class MainActivity : AppCompatActivity() {
 
-    val memCache: MemCache by inject(MemCache::class.java)
+    private val memCache: MemCache by inject()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

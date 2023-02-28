@@ -51,7 +51,7 @@ ext {
             rxJava = "io.reactivex.rxjava3:rxjava:$versions.rxJava",
             rxAndroid = "io.reactivex.rxjava3:rxandroid:$versions.rxAndroid",
             //dependencies injection
-            koin = "io.insert-koin:koin-core:$versions.koin",
+            koin = "io.insert-koin:koin-android:$versions.koin",
 //            koinLoger = "io.insert-koin:koin-androidx-logger:$versions.koin",
             //navigation
             navigationFragment = "androidx.navigation:navigation-fragment-ktx:$versions.navigation",
