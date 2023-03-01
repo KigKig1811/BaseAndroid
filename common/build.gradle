@@ -35,14 +35,39 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.databinding:viewbinding:7.4.1'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    //core
+    implementation coreKtx
+    implementation appCompat
+    implementation material
+    implementation constraintlayout
+    testImplementation junit
+    androidTestImplementation testJunit
+    androidTestImplementation espressoCore
 
-    implementation project(':domain')
+    //navigation
+    implementation navigationFragment
+    implementation navigationUi
+
+    //network
+    implementation retrofit
+    implementation retrofitGsonConverter
+    implementation retrofitRxJava2Adapter
+    implementation scalars
+    implementation loggingInterceptor
+
+    //rxAndroid
+    implementation rxAndroid
+
+    //parser
+    implementation gson
+
+    //media
+    implementation coil
+    implementation glide
+
+    //dependencies injection
+    implementation "io.insert-koin:koin-android:3.3.3"
+
+    implementation project(":domain")
 
 }

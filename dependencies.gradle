@@ -12,6 +12,7 @@ ext {
             testJunit         : '1.1.5',
             espressoCore      : '3.5.1',
             lifecycleVersion  : '2.5.1',
+            swipeRefreshLayout: '1.1.0',
 
             retrofit          : '2.9.0',
             loggingInterceptor: '4.10.0',
@@ -35,6 +36,7 @@ ext {
             junit = "junit:junit:$versions.junit",
             testJunit = "androidx.test.ext:junit:$versions.testJunit",
             espressoCore = "androidx.test.espresso:espresso-core:$versions.espressoCore",
+            swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:$versions.swipeRefreshLayout",
             //viewModel,liveData
             lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleVersion",
             liveData = "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycleVersion",
@@ -52,7 +54,6 @@ ext {
             rxAndroid = "io.reactivex.rxjava3:rxandroid:$versions.rxAndroid",
             //dependencies injection
             koin = "io.insert-koin:koin-android:$versions.koin",
-//            koinLoger = "io.insert-koin:koin-androidx-logger:$versions.koin",
             //navigation
             navigationFragment = "androidx.navigation:navigation-fragment-ktx:$versions.navigation",
             navigationUi = "androidx.navigation:navigation-ui-ktx:$versions.navigation",

@@ -2,6 +2,7 @@ package com.example.domain.usecases
 
 import com.example.domain.common.BaseFlowableUseCase
 import com.example.domain.common.FlowableRxTransformer
+import com.example.domain.entities.BeerResult
 import com.example.domain.entities.ListBeerResult
 import com.example.domain.repositories.AppRepository
 import io.reactivex.rxjava3.core.Flowable
@@ -18,5 +19,11 @@ class AppUseCase(
         } else {
             repositories.requestGetListBeer(mapOf())
         }
+    }
+
+    fun requestGetBeer(): Flowable<ListBeerResult> {
+        val data = mapOf<String,Any>(
+        )
+        return single(data)
     }
 }

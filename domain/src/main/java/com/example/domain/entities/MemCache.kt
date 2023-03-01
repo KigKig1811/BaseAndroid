@@ -1,4 +1,4 @@
-package com.example.data.entities
+package com.example.domain.entities
 
 class MemCache {
     var languageSelected: String = "en"

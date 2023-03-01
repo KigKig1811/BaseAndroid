@@ -7,9 +7,9 @@ data class ListBeerResult(
 data class BeerResult(
     var id: Int? = -1,
     var name: String? = null,
-    var tagline: String? = null,
-    var first_brewed: String? = null,
+    var tagLine: String? = null,
+    var firstBrewed: String? = null,
     var description: String? = null,
-    var image_url: String? = null,
+    var imageUrl: String? = null,
     var abv: Float? = 0f
 )

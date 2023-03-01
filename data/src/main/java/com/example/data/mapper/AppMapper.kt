@@ -19,9 +19,9 @@ class AppMapper {
             with(beerEntity) {
                 id?.let { result.id = it }
                 name?.let { result.name = it }
-                tagline?.let { result.tagline = it }
-                first_brewed?.let { result.first_brewed = it }
-                image_url?.let { result.image_url = it }
+                tagline?.let { result.tagLine = it }
+                first_brewed?.let { result.firstBrewed = it }
+                image_url?.let { result.imageUrl = it }
                 description?.let { result.description = it }
                 abv?.let { result.abv = it }
             }
