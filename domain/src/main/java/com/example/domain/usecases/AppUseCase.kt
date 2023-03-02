@@ -5,7 +5,8 @@ import com.example.domain.common.FlowableRxTransformer
 import com.example.domain.entities.BeerResult
 import com.example.domain.entities.ListBeerResult
 import com.example.domain.repositories.AppRepository
-import io.reactivex.rxjava3.core.Flowable
+import io.reactivex.Flowable
+
 
 class AppUseCase(
     private val transformer: FlowableRxTransformer<ListBeerResult>,

@@ -1,6 +1,6 @@
 package com.example.domain.common
 
-import io.reactivex.rxjava3.core.FlowableTransformer
+import io.reactivex.FlowableTransformer
 
 abstract class FlowableRxTransformer<T> : FlowableTransformer<T, T> {
 }

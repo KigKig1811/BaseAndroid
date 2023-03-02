@@ -1,8 +1,6 @@
 package com.example.data.api
 
-import com.example.domain.entities.BeerResult
-import com.example.domain.entities.ListBeerResult
-import io.reactivex.rxjava3.core.Flowable
+import io.reactivex.Flowable
 import retrofit2.http.GET
 
 interface AppApi {

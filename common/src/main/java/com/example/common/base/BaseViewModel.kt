@@ -8,8 +8,8 @@ import com.example.domain.entities.Event
 import com.example.domain.entities.MemCache
 import com.example.domain.entities.TokenStatusThrowable
 import com.example.domain.enumApp.TokenStatusEnum
-import io.reactivex.rxjava3.disposables.CompositeDisposable
-import io.reactivex.rxjava3.disposables.Disposable
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.disposables.Disposable
 import org.koin.java.KoinJavaComponent.inject
 import java.net.ConnectException
 import java.net.UnknownHostException

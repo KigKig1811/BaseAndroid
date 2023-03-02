@@ -1,6 +1,7 @@
 package com.example.domain.common
 
-import io.reactivex.rxjava3.core.Flowable
+import io.reactivex.Flowable
+
 
 abstract class BaseFlowableUseCase<T>(private val transformer: FlowableRxTransformer<T>) {
 

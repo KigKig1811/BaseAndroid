@@ -5,7 +5,7 @@ import com.example.data.entities.ListBeerEntity
 import com.example.data.mapper.AppMapper
 import com.example.data.utils.JwtParserUtil
 import com.example.domain.entities.ListBeerResult
-import io.reactivex.rxjava3.core.Flowable
+import io.reactivex.Flowable
 
 class AppRemoteImpl constructor(private val api: AppApi) : AppDataStore {
 

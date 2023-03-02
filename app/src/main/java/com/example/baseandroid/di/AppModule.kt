@@ -6,6 +6,8 @@ import com.example.data.api.AppApi
 import com.example.domain.entities.MemCache
 import com.example.data.repositories.AppRemoteImpl
 import com.example.data.repositories.AppRepositoryImpl
+import com.example.domain.repositories.AppRepository
+import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import retrofit2.Retrofit
 
@@ -16,8 +18,8 @@ val mNetworkModules = module {
 }
 
 val mRepositoryModules = module {
-    single { AppRemoteImpl(api = get() as AppApi) }
-    single { AppRepositoryImpl(remote = get() as AppRemoteImpl) }
+    single { AppRemoteImpl(api = get()) }
+    single<AppRepository>(named("AppRepository")) { AppRepositoryImpl(remote = get()) }
 }
 
 val memCacheModule = module {

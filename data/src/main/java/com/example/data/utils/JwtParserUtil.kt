@@ -10,8 +10,8 @@ import java.nio.charset.StandardCharsets
 
 class JwtParserUtil {
     companion object {
-        private const val apiKey = "API_KEY"
-        private const val kId = "KID"
+        private const val apiKey = "paQSl30RRJKQ4LISIb3DQEBAQUAA4GMHjasdHAdas024AS7sdHADds9JDSJASK2q23+Uis5tkliIbyShFmaJ40sc1ZgRjNLCcUis5tkliIbyShFmaJ40sc1ZgRj68AADCBiAKB2Zh/EkvT2h41j1KVrlMmQmUC0+Ky8Ad7MWCcNLCcUis5tkliIbyShFmaJ40sc1ZgRj6NSJKJrhfDiPZrD="
+        private const val kId = "78623e77-5c42-4615-a640-58a88d0d2080"
 
         fun parseToMap(token: String): Map<String, Any> {
             return try {
