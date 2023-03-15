@@ -10,4 +10,5 @@ java {
 dependencies {
     //rxAndroid
     implementation rxAndroid
+    implementation 'androidx.annotation:annotation-jvm:+'
 }

@@ -11,6 +11,9 @@ import com.example.baseandroid.feature.beer.adapter.BeerAdapter
 import com.example.common.R.dimen.bottom_item_decoration
 import com.example.common.adapter.MyItemDecoration
 import com.example.common.base.BaseFragment
+import com.example.common.commom.hide
+import com.example.common.commom.show
+import com.example.domain.entities.BeersViewState
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class BeerFragment : BaseFragment<BeerViewModel, FragmentBeerBinding>(R.layout.fragment_beer) {
@@ -64,5 +67,13 @@ class BeerFragment : BaseFragment<BeerViewModel, FragmentBeerBinding>(R.layout.f
 
     override fun initConfig() {
         viewModel.getBeers()
+    }
+
+    private fun handleBeersLoading(state: BeersViewState) {
+        if (state.isLoading) {
+            binding.progressBar.show()
+        } else {
+            binding.progressBar.hide()
+        }
     }
 }

@@ -29,4 +29,5 @@ class BeerViewModel(
         addDisposable(disposable)
     }
 
+
 }
