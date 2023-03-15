@@ -28,4 +28,22 @@ class AppMapper {
         }
         return result
     }
+
+    fun mapToBeersResult(entity: List<BeerEntity>): List<BeerResult> {
+        val beers = mutableListOf<BeerResult>()
+        entity.map {beerEntity->
+            val beer = BeerResult()
+            with(beerEntity) {
+                id?.let { beer.id = it }
+                name?.let { beer.name = it }
+                tagline?.let { beer.tagLine = it }
+                first_brewed?.let { beer.firstBrewed = it }
+                image_url?.let { beer.imageUrl = it }
+                description?.let { beer.description = it }
+                abv?.let { beer.abv = it }
+            }
+            beers.add(beer)
+        }
+        return beers
+    }
 }

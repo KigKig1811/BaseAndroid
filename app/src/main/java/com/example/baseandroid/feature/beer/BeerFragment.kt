@@ -35,9 +35,10 @@ class BeerFragment : BaseFragment<BeerViewModel, FragmentBeerBinding>(R.layout.f
         return binding.root
     }
 
-
     override fun initControl() {
-       showToast("init Control")
+        binding.swipeRefreshLayout.setOnRefreshListener {
+            viewModel.getBeers()
+        }
     }
 
     override fun initUI() {
@@ -55,8 +56,8 @@ class BeerFragment : BaseFragment<BeerViewModel, FragmentBeerBinding>(R.layout.f
 
     override fun initEvent() {
         viewModel.listBeerLiveData.observe(viewLifecycleOwner) {
-            it.getContentIfNotHandled()?.let {
-                beerAdapter.addAll(it.listBeer)
+            it.getContentIfNotHandled()?.let { beers ->
+                beerAdapter.addAll(beers)
             }
         }
     }

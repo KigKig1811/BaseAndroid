@@ -9,10 +9,10 @@ import io.reactivex.Flowable
 
 
 class AppUseCase(
-    private val transformer: FlowableRxTransformer<ListBeerResult>,
+    private val transformer: FlowableRxTransformer<List<BeerResult>>,
     private val repositories: AppRepository
-) : BaseFlowableUseCase<ListBeerResult>(transformer) {
-    override fun createFlowable(data: Map<String, Any>?): Flowable<ListBeerResult> {
+) : BaseFlowableUseCase<List<BeerResult>>(transformer) {
+    override fun createFlowable(data: Map<String, Any>?): Flowable<List<BeerResult>> {
         val map = mutableMapOf<String, Any>()
         return if (data !== null) {
             data.forEach { map[it.key] = it.value }
@@ -22,7 +22,7 @@ class AppUseCase(
         }
     }
 
-    fun requestGetBeer(): Flowable<ListBeerResult> {
+    fun requestGetBeer(): Flowable<List<BeerResult>> {
         val data = mapOf<String,Any>(
         )
         return single(data)

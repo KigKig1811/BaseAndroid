@@ -9,7 +9,7 @@ import com.example.domain.entities.Event
 import com.example.domain.entities.ListBeerResult
 import com.example.domain.usecases.AppUseCase
 
-typealias EventListBeer = Event<ListBeerResult>
+typealias EventListBeer = Event<List<BeerResult>>
 
 class BeerViewModel(
     private val beerUseCase: AppUseCase
@@ -28,6 +28,5 @@ class BeerViewModel(
         }
         addDisposable(disposable)
     }
-
 
 }
